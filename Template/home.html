@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GEOSAMFELEM FOOTBALL BLOG</title>
+</head>
+<body>
+<h1>GEOSAMFELEM FOOTBALL BLOG</h1>
+<h3>where football lives...</h3>
+<p>
+For the best & latest stories in football, This is the place to be.
+</p>
+<form action="/postblog" method="post">
+<!--    <label>Author:</label>-->
+<!--    <div><input></div>-->
+<!--    <div></div><label>Topic:</label>-->
+<!--    <input><br><p></p>-->
+<!--    <label>Content:</label>-->
+<!--    <textarea><br><p></p>-->
+
+    <div>
+        <label>
+            Author: <input type="text" name="username" placeholder="Author name">
+        </label>
+    </div>
+    <br>
+    <div>
+        Topic: <input type="text"  name="topic" placeholder="=Blog title">
+    </div>
+    <br>
+    <div>
+        Content: <textarea name="content"></textarea>
+    </div>
+    <br>
+<div>
+    <input type="submit">
+</div>
+</form>
+<div>
+{{range .}}
+<div>
+    <h1>{{.Topics}}</h1>
+    <p>{{.Contents}}</p>
+    <p>{{.Author}}</p>
+    <button type="button"> Edit</button>
+    <br>
+    <button type="button">Delete</button>
+    <br>
+    <button type="button">View</button>
+</div>
+{{end}}
+</div>
+
+</body>
+</html>
